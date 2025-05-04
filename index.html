@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIV E-COMMERCE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>E-Commerce Store</h1>
+            <div class="header-buttons">
+                <button class="header-btn" data-tab="wishlist">
+                    <span class="icon">❤️</span>
+                    <span class="count" id="wishlist-count">0</span>
+                </button>
+                <button class="header-btn" data-tab="cart">
+                    <span class="icon">🛒</span>
+                    <span class="count" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="products">Products</button>
+            <button class="tab-btn" data-tab="total">Total</button>
+        </div>
+
+        <!-- Products Tab -->
+        <div class="tab-content active" id="products">
+            <div class="products-grid">
+                <!-- Product items will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Product Details Tab -->
+        <div class="tab-content" id="product-details">
+            <div class="product-details-container">
+                <button class="back-btn" onclick="goBackToProducts()">← Back to Products</button>
+                <div class="product-details-content">
+                    <div class="product-details-image">
+                        <img id="details-image" src="" alt="">
+                    </div>
+                    <div class="product-details-info">
+                        <h2 id="details-title"></h2>
+                        <p class="details-category" id="details-category"></p>
+                        <p class="details-price" id="details-price"></p>
+                        <div class="details-rating">
+                            <span id="details-rating"></span>
+                            <span id="details-reviews"></span>
+                        </div>
+                        <div class="size-selection">
+                            <h3>Select Size</h3>
+                            <div class="size-options">
+                                <button class="size-btn" data-size="S">S</button>
+                                <button class="size-btn" data-size="M">M</button>
+                                <button class="size-btn" data-size="L">L</button>
+                                <button class="size-btn" data-size="XL">XL</button>
+                                <button class="size-btn" data-size="XXL">XXL</button>
+                            </div>
+                        </div>
+                        <p class="details-description" id="details-description"></p>
+                        <div class="details-actions">
+                            <button onclick="addToCartFromDetails()">Add to Cart</button>
+                            <button onclick="addToWishlistFromDetails()">Add to Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Tab -->
+        <div class="tab-content" id="cart">
+            <div class="cart-items">
+                <!-- Cart items will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Wishlist Tab -->
+        <div class="tab-content" id="wishlist">
+            <div class="wishlist-items">
+                <!-- Wishlist items will be added dynamically -->
+            </div>
+        </div>
+
+        <!-- Total Tab -->
+        <div class="tab-content" id="total">
+            <div class="total-summary">
+                <h2>Order Summary</h2>
+                <p>Total Items: <span id="total-items">0</span></p>
+                <p>Total Price: $<span id="total-price">0.00</span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your one-stop destination for all your shopping needs. Quality products at affordable prices.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                    <li><i class="fas fa-envelope"></i> info@shivecommerce.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Shopping Street, City</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 SHIV E-COMMERCE. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
